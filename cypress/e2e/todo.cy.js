@@ -12,7 +12,6 @@ describe('template spec', () => {
     // cy.pause()
     cy.getDataTest('delete-button').click()
     cy.getDataTest('input-label').should('not.exist','must buy a new car')
-
     
   })
 })
