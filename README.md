@@ -1,7 +1,7 @@
 # To open this project clone this repository and run the following command
 
 ```bash
-git clone this repository
+git clone https://github.com/arturoCrisanto/Cypress-Laravel-todolist.git
 ```
 
 ## and run
