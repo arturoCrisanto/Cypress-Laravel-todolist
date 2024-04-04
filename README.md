@@ -1,13 +1,27 @@
-To open this project clone this repository and run the following command
+# To open this project clone this repository and run the following command
 
-'git clone this repository'
+```bash
+git clone this repository
+```
 
-and run 'npm install'
+## and run
 
-and to open this project 'php artisan serve'
+```bash
+npm install
+```
 
-for installing cypress
+## and to open this project
 
-open new cli and run 'npx cypress open'
+```bash
+ php artisan serve
+```
 
-and thats all
+# for installing cypress
+
+## open new cli and run
+
+```bash
+ npx cypress open
+```
+
+# and thats all
