@@ -15,20 +15,20 @@
         <h1 class="text-center pt-4 text-white fw-bold">TODO list</h1>
         <form action="/store" method="POST" class="input-group w-75 mx-auto mt-4">
             @csrf
-            <input type="text" class="form-control border border-dark rounded" placeholder="Todo" name="content"
+            <input data-test='todo-input' type="text" class="form-control border border-dark rounded" placeholder="Todo" name="content"
                 aria-label="Recipient's username with two button addons">
-            <button class="btn btn-outline-primary rounded mx-2" type="submit"><img class="img"
+            <button data-test='add-button'class="btn btn-outline-primary rounded mx-2" type="submit"><img class="img"
                     src="images/add_icon.png" alt="Add Icon"></button>
-            <button class="btn btn-outline-danger rounded" id="delete-btn" type="button"><img class="img"
+            <button data-test='delete-button' class="btn btn-outline-danger rounded" id="delete-btn" type="button"><img class="img"
                     src="images/delete_icon.png" alt="Delete Icon"></button>
         </form>
 
         <form id="form" action="/delete" method="POST" class="w-75 mx-auto mt-5">
             @csrf            
             @foreach ($data as $data)
-                <label for="{{ $data->id }}" class="p-2 mb-2 rounded bg-dark text-white rounded-4 d-flex"
+                <label data-test='input-label' for="{{ $data->id }}" class="p-2 mb-2 rounded bg-dark text-white rounded-4 d-flex"
                     style="cursor: pointer">
-                    <input id="{{ $data->id }}" type="checkbox" class="me-3" data="check" value="{{ $data->id }}" name="checked[]" onchange="check()">
+                    <input data-test='input-checkbox' id="{{ $data->id }}" type="checkbox" class="me-3" data="check" value="{{ $data->id }}" name="checked[]" onchange="check()">
                     <p id="data_{{ $data->id }}" class="fw-bold fs-5" style="text-align: justify">{{ $data->content }}</p>
                 </label>
             @endforeach
